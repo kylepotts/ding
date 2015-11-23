@@ -1,8 +1,11 @@
 import requests
 import json
+import time
 
 API_ROOT = "http://api.tylorgarrett.com"
 
+from Adafruit_8x8 import EightByEight
+grid = EightByEight(address=0x70)
 
 def getMachines(location):
     url =  "%s/laundry/%s" % (API_ROOT,location)
@@ -19,33 +22,25 @@ def getMachines(location):
 			washers.append(machine)
     return [washers,dryers]
 
-def machinesToBitmap():
-    bitmap = []
-    for i in range(0,8):
-        r = []
-        for j in range(0,8):
-            r.append(0)
-        bitmap.append(r)
-    machinesJSONString = getMachines("shreve").encode('utf-8')
-    machines = json.loads(machinesJSONString)
-    machinesIndex = 0
-    onDryer = True
-    i = 0
-    while i< 8:
-        for j in range(0,8):
-            machinesIndex += 1
-            if(machinesIndex >= len(machines)):
-                bitmap[i][j] = 0
-            else:
-                print(machines[machinesIndex]['type'])
-                if(machines[machinesIndex]['status'] == "Available" ):
-                    bitmap[i][j] = 1
-                else:
-                    bitmap[i][j] = 0
-
-        i = i+1
-
-    for row in bitmap:
-        print(row)
+def gridPrint():
+	grid.clear()
+	for x in range(2, 8):
+		for y in range(0, 8):
+			grid.setPixel(x, y)
+			time.sleep(0.05)
+	time.sleep(0.5)
+	grid.clear()
+	time.sleep(0.5)
+	
+def machinesToBitMap(allMachines,washerLength, dryerLength):
+	bitmap = [[0]*8]*8
+	for i in range(washerLength):
+		print(i)
+	#print(bitmap)
+		
+		
+			
+	
+	
 
 
