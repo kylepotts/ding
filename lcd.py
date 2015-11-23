@@ -15,5 +15,9 @@ class LCD:
 		self.display.write("\x0C")
 		self.display.write(text)
 		self.display.write(sound)
+	
+	def clear(self):
+		self.display.write("\x0C")
+		
 		
 
