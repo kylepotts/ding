@@ -101,6 +101,8 @@ def respondToButtons(q):
 				displayState = 'machines'
 				lcd.write(createStringFromMachine(allMachines[machineIndex]))
 				
+				printBitMap(machinesToBitMap(allMachines,len(washers), len(dryers)))
+				
 				
 		#handle loading
 		elif displayState == 'loading':
