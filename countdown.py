@@ -19,13 +19,11 @@ def countdown(t,lcd,q,machineName,location):
 		time.sleep(1)
 		t-=1
 	
-	lcd.write('\xD8')
+	lcd.write('\xD2')
 	for i in range(8):
-		lcd.write('\xD3')
-		lcd.write('\xE4')
-		lcd.write('\XDC')
-		lcd.write('\xD4')
-		lcd.write('\xDE')
+		lcd.write('\xE0')
+		lcd.write('\xE3')
+		lcd.write('\xE5')
 	lcd.write(machineName + ' is done' + ' at ' + location)
 
 

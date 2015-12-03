@@ -32,43 +32,6 @@ def gridPrint():
 	grid.clear()
 	time.sleep(0.5)
 	
-'''
-	
-def machinesToBitMap(allMachines,washerLength, dryerLength):
-	bitmap = []
-	spacer = False
-	index = 0
-	leftToFill = 0
-	row = []
-	while (index) < 64:
-		if((index)%8 == 0 and index != 0):
-			print(len(row))
-			bitmap.append(row)
-			row = []
-			
-		if index-leftToFill < washerLength:
-			machine = allMachines[index-leftToFill]
-			if machine['status'] == 'Available':
-				row.append(1)
-			else:
-				row.append(0)
-				
-		elif index == washerLength:
-			leftToFill = (index%8)
-			for n in range(0,leftToFill):
-				row.append(0)
-			bitmap.append(row)
-			
-			row = []
-			bitmap.append([1,1,0,0,1,1,0,0])
-			index = index+leftToFill
-		
-		else:
-			row.append(0)
-		index = index+1
-	print(bitmap)
-	return bitmap
-	'''
 	
 def machinesToBitMap(allMachines, washerLength, dryerLength):
 	index = 0

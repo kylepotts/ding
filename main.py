@@ -137,6 +137,7 @@ def respondToButtons(q):
 				displayState = 'location'
 				locationIndex = 0
 				machineIndex = 0
+				allMachines = []
 				lcd.write(locations[locationIndex])
 				clearGrid()
 			
@@ -162,8 +163,9 @@ def respondToButtons(q):
 			
 			if button == 'back':
 				prevState = displayState
-				displayState = 'machines'
-				lcd.write(createStringFromMachine(allMachines[machineIndex]))
+				displayState = 'location'
+				locationIndex = 0
+				lcd.write(locations[locationIndex])
 				countQueue.put(False)
 				
 		if button == 'upRight':
