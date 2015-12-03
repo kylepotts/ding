@@ -32,47 +32,102 @@ def gridPrint():
 	grid.clear()
 	time.sleep(0.5)
 	
+'''
+	
 def machinesToBitMap(allMachines,washerLength, dryerLength):
 	bitmap = []
 	spacer = False
-	for i in range(0,8):
-		newRow = []
-		for j in range(0,8):
-			if i+j < len(allMachines):
-				machine = allMachines[i+j]
-				if i+j < washerLength:
-					if (machine['status'] == 'Available'):
-						newRow.append(1)
-					else:
-						newRow.append(0)
-				if i+j == washerLength and spacer == False:
-					print('setting')
-					bitmap.append([0]*8)
-					spacer = True
-					
-				if i+j > washerLength and i+j < washerLength+dryerLength:
-					if (machine['status'] == 'Available'):
-						newRow.append(1)
-					else:
-						newRow.append(0)
-		bitmap.append(newRow)
+	index = 0
+	leftToFill = 0
+	row = []
+	while (index) < 64:
+		if((index)%8 == 0 and index != 0):
+			print(len(row))
+			bitmap.append(row)
+			row = []
+			
+		if index-leftToFill < washerLength:
+			machine = allMachines[index-leftToFill]
+			if machine['status'] == 'Available':
+				row.append(1)
+			else:
+				row.append(0)
+				
+		elif index == washerLength:
+			leftToFill = (index%8)
+			for n in range(0,leftToFill):
+				row.append(0)
+			bitmap.append(row)
+			
+			row = []
+			bitmap.append([1,1,0,0,1,1,0,0])
+			index = index+leftToFill
+		
+		else:
+			row.append(0)
+		index = index+1
+	print(bitmap)
+	return bitmap
+	'''
+	
+def machinesToBitMap(allMachines, washerLength, dryerLength):
+	index = 0
+	bitmap = []
+	row = []
+	leftToFill = 0
+	while(index <= 64):
+		if (len(row) == 8 and index!= 0):
+			bitmap.append(row)
+			row = []
+			
+		if ( (index-leftToFill < washerLength) or (index-leftToFill > washerLength and index-leftToFill < len(allMachines))):
+			machine = allMachines[index-leftToFill]
+			if machine['status'] == 'Available':
+				row.append(1)
+			else:
+				row.append(0)
+				
+			
+		elif index == washerLength:
+			leftToFill = (index%8)
+			for n in range(0,leftToFill):
+				row.append(0)
+			bitmap.append(row)
+			row = []
+			
+			bitmap.append([1,0,0,1,0,0,0,1])
+			index = index+leftToFill
+			
+		else:
+			row.append(0)
+		index = index+1
+		
 	return bitmap
 	
 
 def printBitMap(bitmap):
 	grid.clear()
-	print(bitmap)
 	for x in range(2, 8):
 		for y in range(0, 8):
 			if(bitmap[x-2][y] == 1):
 				grid.setPixel(x,y)
-			time.sleep(0.05)
-	time.sleep(0.5)
+				
 	
-	for x in range(0,2):
-		for y in range(0,8):
-			if(bitmap[x+4][y] == 1):
-				grid.setPixel(x,y)
+	for y in range(0,8):
+		if(bitmap[5][y] == 1):
+			grid.setPixel(7,y)
+			
+	for y in range(0,8):
+		if(bitmap[6][y] == 1):
+			grid.setPixel(0,y)
+			
+	for y in range(0,8):
+		if (bitmap[7][y] == 1):
+			grid.setPixel(1,y)
+		
+
+def clearGrid():
+	grid.clear()
 	
 				
 		

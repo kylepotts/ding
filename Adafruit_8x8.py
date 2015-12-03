@@ -30,7 +30,6 @@ class EightByEight:
 
   def setPixel(self, x, y, color=1):
     "Sets a single pixel"
-    print("color")
     if (x >= 8):
       return
     if (y >= 8):

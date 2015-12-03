@@ -2,11 +2,12 @@ import wiringpi2 as wp
 
 from multiprocessing import Process,Queue
 from getMachines import *
+from countdown import *
 import time
 
 from lcd import *
 
-locations = ['cary', 'earhart', 'harrison', 'hawkins', 'hillenbrand','mccutheon', 'meredith_nw', 'meredith_se', 
+locations = ['cary', 'demo', 'harrison', 'hawkins', 'hillenbrand','mccutheon', 'meredith_nw', 'meredith_se', 
 			 'owen','shreve', 'tarkington','third','wiley','windsor_duhme','windsor_warren'];
 			 
 
@@ -15,6 +16,7 @@ machineIndex = 0
 washers = []
 dryers = []
 allMachines = []
+countDownProcess = None
 wp.wiringPiSetup()
 wp.pinMode(25,0)
 wp.pinMode(24,0)
@@ -25,6 +27,7 @@ wp.pinMode(28,0)
 
 lcd = LCD()
 q = Queue()
+countQueue = Queue()
 displayState = 'location'
 prevState = ''
 
@@ -70,7 +73,13 @@ def respondToButtons(q):
 		global washers
 		global dryers
 		global allMachines
+		global countQueue
+		global countDownProcess
 		button = q.get(block=True)
+		
+		if countDownProcess != None and countDownProcess.is_alive() == False:
+			countDownProcess = None
+		
 		#handle location
 		if displayState == 'location':
 			if button == "downLeft" and locationIndex > 0:
@@ -97,10 +106,11 @@ def respondToButtons(q):
 				machineIndex = 0
 				machine = allMachines[machineIndex]
 				
+				
 				prevState = 'location'
 				displayState = 'machines'
 				lcd.write(createStringFromMachine(allMachines[machineIndex]))
-				
+				time.sleep(.1)
 				printBitMap(machinesToBitMap(allMachines,len(washers), len(dryers)))
 				
 				
@@ -128,6 +138,57 @@ def respondToButtons(q):
 				locationIndex = 0
 				machineIndex = 0
 				lcd.write(locations[locationIndex])
+				clearGrid()
+			
+			elif button == 'select':
+				prevState = 'machines'
+				displayState = 'timer'
+				t = allMachines[machineIndex]['time']
+				t= t.replace(u'\xa0',u'')
+				if t  == u'':
+					lcd.write('Machine         is available')
+					time.sleep(0.75)
+					lcd.write(createStringFromMachine(allMachines[machineIndex]))
+					displayState = 'machines'
+				else:
+					t = [int(s) for s in allMachines[machineIndex]['time'].split() if s.isdigit()]
+					timeInSeconds = t[0]*60
+					countDownProcess = createCountDownProcess(timeInSeconds,lcd,countQueue, allMachines[machineIndex]['name'], locations[locationIndex])
+					countDownProcess.start()
+					
+			
+		
+		elif displayState == 'timer':
+			
+			if button == 'back':
+				prevState = displayState
+				displayState = 'machines'
+				lcd.write(createStringFromMachine(allMachines[machineIndex]))
+				countQueue.put(False)
+				
+		if button == 'upRight':
+			
+			if countDownProcess != None:
+				lcd.clear()
+				prevState = displayState
+				displayState = 'timer'
+				countQueue.put(True)
+			else:
+				print('Process is none')
+				
+		if button == 'downRight':
+			if countDownProcess != None:
+				if displayState == 'timer':
+					if prevState == 'machines':
+						prevState = 'timer'
+						displayState = 'machines'
+						lcd.write(createStringFromMachine(allMachines[machineIndex]))
+					elif prevState == 'location':
+						prevState = 'timer'
+						displayState = 'location'
+						lcd.write(locations[locationIndex])
+				
+				countDownProcess.terminate()
 			
 		time.sleep(.1)
 		
