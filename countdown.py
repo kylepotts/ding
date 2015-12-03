@@ -1,5 +1,6 @@
 from multiprocessing import Process,Queue
 from lcd import *
+from sendsms import *
 
 
 printToScreen = True
@@ -19,6 +20,7 @@ def countdown(t,lcd,q,machineName,location):
 		time.sleep(1)
 		t-=1
 	
+	sendsms(machineName + ' at ' + location + ' is done ')
 	lcd.write('\xD2')
 	for i in range(8):
 		lcd.write('\xE0')

@@ -166,6 +166,7 @@ def respondToButtons(q):
 				displayState = 'location'
 				locationIndex = 0
 				lcd.write(locations[locationIndex])
+				grid.clear()
 				countQueue.put(False)
 				
 		if button == 'upRight':
