@@ -34,16 +34,52 @@ prevState = ''
 def createStringFromMachine(machine):
 	if machine['status'] == 'Available':
 		if machine['type'] == 'Washer':
-			return "%s      %s" % (machine['name'], machine['status'])
+			s = "%s  %s" % (machine['name'],machine['status'])
+			return splitForLCD(s)
+			
 		elif machine['type'] == 'Dryer':
-			return "%s       %s" % (machine['name'], machine['status'])
+			s = "%s  %s" % (machine['name'], machine['status'])
+			return splitForLCD(s)
+			
 	
 	elif machine['status'] == 'End of cycle':
-		return "%s  %s" % (machine['name'], machine['status'])
+		s = "%s  %s" % (machine['name'], machine['status'])
+		return splitForLCD(s)
 		
 	elif machine['status'] != 'Available':
 		timeLeft = machine['time'][0:machine['time'].find('u')]
-		return "%s      %s %s" % (machine['name'], machine['status'], timeLeft)
+		s = "%s  %s %s" % (machine['name'], machine['status'], timeLeft)
+		return splitForLCD(s)
+		
+
+def splitForLCD(s):
+	charWritten = 0
+	newString = []
+	words = s.split()
+	for word in words:
+		if len(word)+charWritten <= 16:
+			for char in word:
+				newString.append(char)
+				charWritten += 1
+		else:
+			left = 16 - charWritten
+			for i in range(0,left):
+				newString.append(' ')
+				charWritten += 1
+			charWritten = 0
+			
+			if len(word) > 16:
+				print('fix')
+			else:
+				for char in word:
+					newString.append(char)
+					charWritten += 1
+			
+		newString.append(' ')
+		charWritten += 1
+			
+	s = ''.join(newString)[0:32]
+	return s[0:32] 
 		
 
 def listenForButtons(q):
