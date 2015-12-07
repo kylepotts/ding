@@ -43,7 +43,7 @@ def machinesToBitMap(allMachines, washerLength, dryerLength):
 			bitmap.append(row)
 			row = []
 			
-		if ( (index-leftToFill < washerLength) or (index-leftToFill > washerLength and index-leftToFill < len(allMachines))):
+		if ((index-leftToFill < washerLength) or (index-leftToFill > washerLength and index-leftToFill < len(allMachines))):
 			machine = allMachines[index-leftToFill]
 			if machine['status'] == 'Available':
 				row.append(1)
@@ -53,7 +53,8 @@ def machinesToBitMap(allMachines, washerLength, dryerLength):
 			
 		elif index == washerLength:
 			leftToFill = (index%8)
-			for n in range(0,leftToFill):
+			print(leftToFill)
+			for n in range(0,8-leftToFill):
 				row.append(0)
 			bitmap.append(row)
 			row = []
@@ -64,14 +65,13 @@ def machinesToBitMap(allMachines, washerLength, dryerLength):
 		else:
 			row.append(0)
 		index = index+1
-		
 	return bitmap
 	
 
 def printBitMap(bitmap):
 	grid.clear()
 	for x in range(2, 8):
-		for y in range(0, 8):
+		for y in range(0, len(bitmap[x-2])):
 			if(bitmap[x-2][y] == 1):
 				grid.setPixel(x,y)
 				

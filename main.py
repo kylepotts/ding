@@ -131,7 +131,19 @@ def respondToButtons(q):
 				prevState = "location"
 				displayState = "loading"
 				lcd.write(loadingString)
+				machines = []
 				machines = getMachines(locations[locationIndex])
+				
+				if len(machines[0]) == 0 and len(machines[1]) == 0:
+					lcd.write(splitForLCD('Error getting machines'))
+					time.sleep(0.75)
+					prevState = ''
+					displayState = 'location'
+					locationIndex = 0
+					machineIndex = 0
+					lcd.write(locations[locationIndex])
+					continue
+				
 				washers = machines[0]
 				dryers = machines[1]
 				for washer in washers:
