@@ -245,11 +245,14 @@ def respondToButtons(q):
 		
 			
 
-lcd.write(locations[locationIndex])
+ex])
 p1 = Process(target=listenForButtons, args=(q,))
 p2 = Process(target=respondToButtons, args=(q,))
 p1.start()
 p2.start()
+lcd.clear()
 lcd.turnOnScreen()
+lcd.write(locations[locationInd
+
 while True:
 	a =1 
