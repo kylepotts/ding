@@ -11,7 +11,7 @@ from_phone_num = "+13173500444"
 
 def sendsms(message):
 	print "Sending message"
-	incoming = open("config.json").read();
+	incoming = open("/home/pi/dev/ding/config.json").read();
 	listOfNumbers = json.loads(incoming)
 	dictionary = listOfNumbers[0];
 	number = dictionary["phone_number"]
