@@ -1,0 +1,306 @@
+Collecting pubnub
+  Downloading pubnub-3.7.4.tar.gz
+Collecting pycrypto>=2.6.1 (from pubnub)
+  Downloading pycrypto-2.6.1.tar.gz (446kB)
+Collecting requests>=2.4.0 (from pubnub)
+  Downloading requests-2.8.1-py2.py3-none-any.whl (497kB)
+Installing collected packages: pycrypto, requests, pubnub
+  Running setup.py install for pycrypto
+    Complete output from command /usr/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip-build-y6r3e9dj/pycrypto/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-yxcgcc4l-record/install-record.txt --single-version-externally-managed --compile:
+    running install
+    running build
+    running build_py
+    creating build
+    creating build/lib.linux-x86_64-3.5
+    creating build/lib.linux-x86_64-3.5/Crypto
+    copying lib/Crypto/pct_warnings.py -> build/lib.linux-x86_64-3.5/Crypto
+    copying lib/Crypto/__init__.py -> build/lib.linux-x86_64-3.5/Crypto
+    creating build/lib.linux-x86_64-3.5/Crypto/Hash
+    copying lib/Crypto/Hash/MD5.py -> build/lib.linux-x86_64-3.5/Crypto/Hash
+    copying lib/Crypto/Hash/SHA256.py -> build/lib.linux-x86_64-3.5/Crypto/Hash
+    copying lib/Crypto/Hash/hashalgo.py -> build/lib.linux-x86_64-3.5/Crypto/Hash
+    copying lib/Crypto/Hash/SHA512.py -> build/lib.linux-x86_64-3.5/Crypto/Hash
+    copying lib/Crypto/Hash/HMAC.py -> build/lib.linux-x86_64-3.5/Crypto/Hash
+    copying lib/Crypto/Hash/MD2.py -> build/lib.linux-x86_64-3.5/Crypto/Hash
+    copying lib/Crypto/Hash/RIPEMD.py -> build/lib.linux-x86_64-3.5/Crypto/Hash
+    copying lib/Crypto/Hash/MD4.py -> build/lib.linux-x86_64-3.5/Crypto/Hash
+    copying lib/Crypto/Hash/SHA.py -> build/lib.linux-x86_64-3.5/Crypto/Hash
+    copying lib/Crypto/Hash/SHA384.py -> build/lib.linux-x86_64-3.5/Crypto/Hash
+    copying lib/Crypto/Hash/SHA224.py -> build/lib.linux-x86_64-3.5/Crypto/Hash
+    copying lib/Crypto/Hash/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/Hash
+    creating build/lib.linux-x86_64-3.5/Crypto/Cipher
+    copying lib/Crypto/Cipher/Blowfish.py -> build/lib.linux-x86_64-3.5/Crypto/Cipher
+    copying lib/Crypto/Cipher/DES3.py -> build/lib.linux-x86_64-3.5/Crypto/Cipher
+    copying lib/Crypto/Cipher/ARC2.py -> build/lib.linux-x86_64-3.5/Crypto/Cipher
+    copying lib/Crypto/Cipher/AES.py -> build/lib.linux-x86_64-3.5/Crypto/Cipher
+    copying lib/Crypto/Cipher/blockalgo.py -> build/lib.linux-x86_64-3.5/Crypto/Cipher
+    copying lib/Crypto/Cipher/PKCS1_v1_5.py -> build/lib.linux-x86_64-3.5/Crypto/Cipher
+    copying lib/Crypto/Cipher/CAST.py -> build/lib.linux-x86_64-3.5/Crypto/Cipher
+    copying lib/Crypto/Cipher/XOR.py -> build/lib.linux-x86_64-3.5/Crypto/Cipher
+    copying lib/Crypto/Cipher/ARC4.py -> build/lib.linux-x86_64-3.5/Crypto/Cipher
+    copying lib/Crypto/Cipher/DES.py -> build/lib.linux-x86_64-3.5/Crypto/Cipher
+    copying lib/Crypto/Cipher/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/Cipher
+    copying lib/Crypto/Cipher/PKCS1_OAEP.py -> build/lib.linux-x86_64-3.5/Crypto/Cipher
+    creating build/lib.linux-x86_64-3.5/Crypto/Util
+    copying lib/Crypto/Util/number.py -> build/lib.linux-x86_64-3.5/Crypto/Util
+    copying lib/Crypto/Util/py3compat.py -> build/lib.linux-x86_64-3.5/Crypto/Util
+    copying lib/Crypto/Util/randpool.py -> build/lib.linux-x86_64-3.5/Crypto/Util
+    copying lib/Crypto/Util/RFC1751.py -> build/lib.linux-x86_64-3.5/Crypto/Util
+    copying lib/Crypto/Util/Counter.py -> build/lib.linux-x86_64-3.5/Crypto/Util
+    copying lib/Crypto/Util/winrandom.py -> build/lib.linux-x86_64-3.5/Crypto/Util
+    copying lib/Crypto/Util/_number_new.py -> build/lib.linux-x86_64-3.5/Crypto/Util
+    copying lib/Crypto/Util/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/Util
+    copying lib/Crypto/Util/asn1.py -> build/lib.linux-x86_64-3.5/Crypto/Util
+    creating build/lib.linux-x86_64-3.5/Crypto/Random
+    copying lib/Crypto/Random/random.py -> build/lib.linux-x86_64-3.5/Crypto/Random
+    copying lib/Crypto/Random/_UserFriendlyRNG.py -> build/lib.linux-x86_64-3.5/Crypto/Random
+    copying lib/Crypto/Random/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/Random
+    creating build/lib.linux-x86_64-3.5/Crypto/Random/Fortuna
+    copying lib/Crypto/Random/Fortuna/FortunaAccumulator.py -> build/lib.linux-x86_64-3.5/Crypto/Random/Fortuna
+    copying lib/Crypto/Random/Fortuna/FortunaGenerator.py -> build/lib.linux-x86_64-3.5/Crypto/Random/Fortuna
+    copying lib/Crypto/Random/Fortuna/SHAd256.py -> build/lib.linux-x86_64-3.5/Crypto/Random/Fortuna
+    copying lib/Crypto/Random/Fortuna/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/Random/Fortuna
+    creating build/lib.linux-x86_64-3.5/Crypto/Random/OSRNG
+    copying lib/Crypto/Random/OSRNG/rng_base.py -> build/lib.linux-x86_64-3.5/Crypto/Random/OSRNG
+    copying lib/Crypto/Random/OSRNG/fallback.py -> build/lib.linux-x86_64-3.5/Crypto/Random/OSRNG
+    copying lib/Crypto/Random/OSRNG/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/Random/OSRNG
+    copying lib/Crypto/Random/OSRNG/posix.py -> build/lib.linux-x86_64-3.5/Crypto/Random/OSRNG
+    creating build/lib.linux-x86_64-3.5/Crypto/SelfTest
+    copying lib/Crypto/SelfTest/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest
+    copying lib/Crypto/SelfTest/st_common.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest
+    creating build/lib.linux-x86_64-3.5/Crypto/SelfTest/Cipher
+    copying lib/Crypto/SelfTest/Cipher/test_DES3.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Cipher
+    copying lib/Crypto/SelfTest/Cipher/test_CAST.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Cipher
+    copying lib/Crypto/SelfTest/Cipher/test_pkcs1_oaep.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Cipher
+    copying lib/Crypto/SelfTest/Cipher/common.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Cipher
+    copying lib/Crypto/SelfTest/Cipher/test_DES.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Cipher
+    copying lib/Crypto/SelfTest/Cipher/test_XOR.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Cipher
+    copying lib/Crypto/SelfTest/Cipher/test_Blowfish.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Cipher
+    copying lib/Crypto/SelfTest/Cipher/test_ARC2.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Cipher
+    copying lib/Crypto/SelfTest/Cipher/test_AES.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Cipher
+    copying lib/Crypto/SelfTest/Cipher/test_ARC4.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Cipher
+    copying lib/Crypto/SelfTest/Cipher/test_pkcs1_15.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Cipher
+    copying lib/Crypto/SelfTest/Cipher/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Cipher
+    creating build/lib.linux-x86_64-3.5/Crypto/SelfTest/Hash
+    copying lib/Crypto/SelfTest/Hash/test_SHA512.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Hash
+    copying lib/Crypto/SelfTest/Hash/test_SHA224.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Hash
+    copying lib/Crypto/SelfTest/Hash/test_MD4.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Hash
+    copying lib/Crypto/SelfTest/Hash/common.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Hash
+    copying lib/Crypto/SelfTest/Hash/test_SHA.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Hash
+    copying lib/Crypto/SelfTest/Hash/test_MD5.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Hash
+    copying lib/Crypto/SelfTest/Hash/test_RIPEMD.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Hash
+    copying lib/Crypto/SelfTest/Hash/test_SHA384.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Hash
+    copying lib/Crypto/SelfTest/Hash/test_HMAC.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Hash
+    copying lib/Crypto/SelfTest/Hash/test_MD2.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Hash
+    copying lib/Crypto/SelfTest/Hash/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Hash
+    copying lib/Crypto/SelfTest/Hash/test_SHA256.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Hash
+    creating build/lib.linux-x86_64-3.5/Crypto/SelfTest/Protocol
+    copying lib/Crypto/SelfTest/Protocol/test_AllOrNothing.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Protocol
+    copying lib/Crypto/SelfTest/Protocol/test_KDF.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Protocol
+    copying lib/Crypto/SelfTest/Protocol/test_chaffing.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Protocol
+    copying lib/Crypto/SelfTest/Protocol/test_rfc1751.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Protocol
+    copying lib/Crypto/SelfTest/Protocol/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Protocol
+    creating build/lib.linux-x86_64-3.5/Crypto/SelfTest/PublicKey
+    copying lib/Crypto/SelfTest/PublicKey/test_importKey.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/PublicKey
+    copying lib/Crypto/SelfTest/PublicKey/test_RSA.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/PublicKey
+    copying lib/Crypto/SelfTest/PublicKey/test_DSA.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/PublicKey
+    copying lib/Crypto/SelfTest/PublicKey/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/PublicKey
+    copying lib/Crypto/SelfTest/PublicKey/test_ElGamal.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/PublicKey
+    creating build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random
+    copying lib/Crypto/SelfTest/Random/test__UserFriendlyRNG.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random
+    copying lib/Crypto/SelfTest/Random/test_rpoolcompat.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random
+    copying lib/Crypto/SelfTest/Random/test_random.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random
+    copying lib/Crypto/SelfTest/Random/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random
+    creating build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random/Fortuna
+    copying lib/Crypto/SelfTest/Random/Fortuna/test_SHAd256.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random/Fortuna
+    copying lib/Crypto/SelfTest/Random/Fortuna/test_FortunaGenerator.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random/Fortuna
+    copying lib/Crypto/SelfTest/Random/Fortuna/test_FortunaAccumulator.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random/Fortuna
+    copying lib/Crypto/SelfTest/Random/Fortuna/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random/Fortuna
+    creating build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random/OSRNG
+    copying lib/Crypto/SelfTest/Random/OSRNG/test_posix.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random/OSRNG
+    copying lib/Crypto/SelfTest/Random/OSRNG/test_winrandom.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random/OSRNG
+    copying lib/Crypto/SelfTest/Random/OSRNG/test_fallback.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random/OSRNG
+    copying lib/Crypto/SelfTest/Random/OSRNG/test_nt.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random/OSRNG
+    copying lib/Crypto/SelfTest/Random/OSRNG/test_generic.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random/OSRNG
+    copying lib/Crypto/SelfTest/Random/OSRNG/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Random/OSRNG
+    creating build/lib.linux-x86_64-3.5/Crypto/SelfTest/Util
+    copying lib/Crypto/SelfTest/Util/test_Counter.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Util
+    copying lib/Crypto/SelfTest/Util/test_winrandom.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Util
+    copying lib/Crypto/SelfTest/Util/test_number.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Util
+    copying lib/Crypto/SelfTest/Util/test_asn1.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Util
+    copying lib/Crypto/SelfTest/Util/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Util
+    creating build/lib.linux-x86_64-3.5/Crypto/SelfTest/Signature
+    copying lib/Crypto/SelfTest/Signature/test_pkcs1_pss.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Signature
+    copying lib/Crypto/SelfTest/Signature/test_pkcs1_15.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Signature
+    copying lib/Crypto/SelfTest/Signature/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/SelfTest/Signature
+    creating build/lib.linux-x86_64-3.5/Crypto/Protocol
+    copying lib/Crypto/Protocol/AllOrNothing.py -> build/lib.linux-x86_64-3.5/Crypto/Protocol
+    copying lib/Crypto/Protocol/Chaffing.py -> build/lib.linux-x86_64-3.5/Crypto/Protocol
+    copying lib/Crypto/Protocol/KDF.py -> build/lib.linux-x86_64-3.5/Crypto/Protocol
+    copying lib/Crypto/Protocol/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/Protocol
+    creating build/lib.linux-x86_64-3.5/Crypto/PublicKey
+    copying lib/Crypto/PublicKey/_slowmath.py -> build/lib.linux-x86_64-3.5/Crypto/PublicKey
+    copying lib/Crypto/PublicKey/pubkey.py -> build/lib.linux-x86_64-3.5/Crypto/PublicKey
+    copying lib/Crypto/PublicKey/RSA.py -> build/lib.linux-x86_64-3.5/Crypto/PublicKey
+    copying lib/Crypto/PublicKey/DSA.py -> build/lib.linux-x86_64-3.5/Crypto/PublicKey
+    copying lib/Crypto/PublicKey/_DSA.py -> build/lib.linux-x86_64-3.5/Crypto/PublicKey
+    copying lib/Crypto/PublicKey/ElGamal.py -> build/lib.linux-x86_64-3.5/Crypto/PublicKey
+    copying lib/Crypto/PublicKey/_RSA.py -> build/lib.linux-x86_64-3.5/Crypto/PublicKey
+    copying lib/Crypto/PublicKey/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/PublicKey
+    creating build/lib.linux-x86_64-3.5/Crypto/Signature
+    copying lib/Crypto/Signature/PKCS1_PSS.py -> build/lib.linux-x86_64-3.5/Crypto/Signature
+    copying lib/Crypto/Signature/PKCS1_v1_5.py -> build/lib.linux-x86_64-3.5/Crypto/Signature
+    copying lib/Crypto/Signature/__init__.py -> build/lib.linux-x86_64-3.5/Crypto/Signature
+    Skipping optional fixer: buffer
+    Skipping optional fixer: idioms
+    Skipping optional fixer: set_literal
+    Skipping optional fixer: ws_comma
+    running build_ext
+    running build_configure
+    checking for gcc... gcc
+    checking whether the C compiler works... yes
+    checking for C compiler default output file name... a.out
+    checking for suffix of executables...
+    checking whether we are cross compiling... no
+    checking for suffix of object files... o
+    checking whether we are using the GNU C compiler... yes
+    checking whether gcc accepts -g... yes
+    checking for gcc option to accept ISO C89... none needed
+    checking for __gmpz_init in -lgmp... yes
+    checking for __gmpz_init in -lmpir... no
+    checking whether mpz_powm is declared... yes
+    checking whether mpz_powm_sec is declared... yes
+    checking how to run the C preprocessor... gcc -E
+    checking for grep that handles long lines and -e... /usr/bin/grep
+    checking for egrep... /usr/bin/grep -E
+    checking for ANSI C header files... yes
+    checking for sys/types.h... yes
+    checking for sys/stat.h... yes
+    checking for stdlib.h... yes
+    checking for string.h... yes
+    checking for memory.h... yes
+    checking for strings.h... yes
+    checking for inttypes.h... yes
+    checking for stdint.h... yes
+    checking for unistd.h... yes
+    checking for inttypes.h... (cached) yes
+    checking limits.h usability... yes
+    checking limits.h presence... yes
+    checking for limits.h... yes
+    checking stddef.h usability... yes
+    checking stddef.h presence... yes
+    checking for stddef.h... yes
+    checking for stdint.h... (cached) yes
+    checking for stdlib.h... (cached) yes
+    checking for string.h... (cached) yes
+    checking wchar.h usability... yes
+    checking wchar.h presence... yes
+    checking for wchar.h... yes
+    checking for inline... inline
+    checking for int16_t... yes
+    checking for int32_t... yes
+    checking for int64_t... yes
+    checking for int8_t... yes
+    checking for size_t... yes
+    checking for uint16_t... yes
+    checking for uint32_t... yes
+    checking for uint64_t... yes
+    checking for uint8_t... yes
+    checking for stdlib.h... (cached) yes
+    checking for GNU libc compatible malloc... yes
+    checking for memmove... yes
+    checking for memset... yes
+    configure: creating ./config.status
+    config.status: creating src/config.h
+    building 'Crypto.PublicKey._fastmath' extension
+    creating build/temp.linux-x86_64-3.5
+    creating build/temp.linux-x86_64-3.5/src
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/ -I/usr/include/python3.5m -c src/_fastmath.c -o build/temp.linux-x86_64-3.5/src/_fastmath.o
+    src/_fastmath.c: In function ‘rabinMillerTest’:
+    src/_fastmath.c:1372:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (mpz_fits_ulong_p (n) && (mpz_get_ui (n) - 2 < rounds))
+                                                      ^
+    src/_fastmath.c:1374:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      for (i = 0; i < rounds; ++i)
+                    ^
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/_fastmath.o -L/usr/lib -lgmp -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/PublicKey/_fastmath.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Hash._MD2' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python3.5m -c src/MD2.c -o build/temp.linux-x86_64-3.5/src/MD2.o
+    src/MD2.c: In function ‘hash_update’:
+    src/MD2.c:101:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       L=(16-self->count) < len ? (16-self->count) : len;
+                          ^
+    src/MD2.c:101:47: warning: signed and unsigned type in conditional expression [-Wsign-compare]
+       L=(16-self->count) < len ? (16-self->count) : len;
+                                                   ^
+    src/MD2.c: In function ‘hash_digest’:
+    src/MD2.c:141:12: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      for(i=0; i<padlen; i++) padding[i]=padlen;
+                ^
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/MD2.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Hash/_MD2.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Hash._MD4' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python3.5m -c src/MD4.c -o build/temp.linux-x86_64-3.5/src/MD4.o
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/MD4.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Hash/_MD4.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Hash._SHA256' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python3.5m -c src/SHA256.c -o build/temp.linux-x86_64-3.5/src/SHA256.o
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/SHA256.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Hash/_SHA256.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Hash._SHA224' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python3.5m -c src/SHA224.c -o build/temp.linux-x86_64-3.5/src/SHA224.o
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/SHA224.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Hash/_SHA224.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Hash._SHA384' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python3.5m -c src/SHA384.c -o build/temp.linux-x86_64-3.5/src/SHA384.o
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/SHA384.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Hash/_SHA384.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Hash._SHA512' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python3.5m -c src/SHA512.c -o build/temp.linux-x86_64-3.5/src/SHA512.o
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/SHA512.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Hash/_SHA512.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Hash._RIPEMD160' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -DPCT_LITTLE_ENDIAN=1 -Isrc/ -I/usr/include/python3.5m -c src/RIPEMD160.c -o build/temp.linux-x86_64-3.5/src/RIPEMD160.o
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/RIPEMD160.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Hash/_RIPEMD160.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Cipher._AES' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python3.5m -c src/AES.c -o build/temp.linux-x86_64-3.5/src/AES.o
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/AES.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Cipher/_AES.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Cipher._ARC2' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python3.5m -c src/ARC2.c -o build/temp.linux-x86_64-3.5/src/ARC2.o
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/ARC2.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Cipher/_ARC2.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Cipher._Blowfish' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python3.5m -c src/Blowfish.c -o build/temp.linux-x86_64-3.5/src/Blowfish.o
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/Blowfish.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Cipher/_Blowfish.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Cipher._CAST' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python3.5m -c src/CAST.c -o build/temp.linux-x86_64-3.5/src/CAST.o
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/CAST.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Cipher/_CAST.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Cipher._DES' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -Isrc/libtom/ -I/usr/include/python3.5m -c src/DES.c -o build/temp.linux-x86_64-3.5/src/DES.o
+    In file included from /usr/include/python3.5m/Python.h:65:0,
+                     from src/DES.c:37:
+    /usr/include/python3.5m/pytime.h:124:56: warning: ‘struct timespec’ declared inside parameter list
+     PyAPI_FUNC(int) _PyTime_AsTimespec(_PyTime_t t, struct timespec *ts);
+                                                            ^
+    /usr/include/python3.5m/pytime.h:124:56: warning: its scope is only this definition or declaration, which is probably not what you want
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/DES.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Cipher/_DES.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Cipher._DES3' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -Isrc/libtom/ -I/usr/include/python3.5m -c src/DES3.c -o build/temp.linux-x86_64-3.5/src/DES3.o
+    In file included from /usr/include/python3.5m/Python.h:65:0,
+                     from src/DES.c:37,
+                     from src/DES3.c:26:
+    /usr/include/python3.5m/pytime.h:124:56: warning: ‘struct timespec’ declared inside parameter list
+     PyAPI_FUNC(int) _PyTime_AsTimespec(_PyTime_t t, struct timespec *ts);
+                                                            ^
+    /usr/include/python3.5m/pytime.h:124:56: warning: its scope is only this definition or declaration, which is probably not what you want
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/DES3.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Cipher/_DES3.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Cipher._ARC4' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python3.5m -c src/ARC4.c -o build/temp.linux-x86_64-3.5/src/ARC4.o
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/ARC4.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Cipher/_ARC4.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Cipher._XOR' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python3.5m -c src/XOR.c -o build/temp.linux-x86_64-3.5/src/XOR.o
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/XOR.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Cipher/_XOR.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Util.strxor' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python3.5m -c src/strxor.c -o build/temp.linux-x86_64-3.5/src/strxor.o
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/strxor.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Util/strxor.cpython-35m-x86_64-linux-gnu.so
+    building 'Crypto.Util._counter' extension
+    gcc -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -fwrapv -Wall -Wstrict-prototypes -march=x86-64 -mtune=generic -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python3.5m -c src/_counter.c -o build/temp.linux-x86_64-3.5/src/_counter.o
+    gcc -pthread -shared -Wl,-O1,--sort-common,--as-needed,-z,relro build/temp.linux-x86_64-3.5/src/_counter.o -L/usr/lib -lpython3.5m -o build/lib.linux-x86_64-3.5/Crypto/Util/_counter.cpython-35m-x86_64-linux-gnu.so
+    running install_lib
+    creating /usr/lib/python3.5/site-packages/Crypto
+    error: could not create '/usr/lib/python3.5/site-packages/Crypto': Permission denied
+    
+    ----------------------------------------
