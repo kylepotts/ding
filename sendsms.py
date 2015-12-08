@@ -9,7 +9,7 @@ client = TwilioRestClient(account, token)
 
 def sendsms(message):
 	print "Sending message"
-	incoming = open("config.json").read();
+	incoming = open("/home/pi/dev/ding/config.json").read();
 	listOfNumbers = json.loads(incoming)
 
 	for n in listOfNumbers:
