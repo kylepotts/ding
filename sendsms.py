@@ -6,6 +6,8 @@ token = "bd14b9df21940aeefa6ba1ad5062d5cf"
 client = TwilioRestClient(account, token)
 
 
+from_phone_num = '+13173500444'
+
 
 def sendsms(message):
 	print "Sending message"

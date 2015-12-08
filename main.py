@@ -3,6 +3,7 @@ import wiringpi2 as wp
 from multiprocessing import Process,Queue
 from getMachines import *
 from countdown import *
+from pub import *
 import time
 
 from lcd import *

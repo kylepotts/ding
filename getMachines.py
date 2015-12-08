@@ -8,7 +8,7 @@ from Adafruit_8x8 import EightByEight
 grid = EightByEight(address=0x70)
 
 def getMachines(location):
-    url =  "%s/laundry/%s" % (API_ROOT,location)
+    url =  "%s/laundry/v2/%s" % (API_ROOT,location)
     response = requests.get(url)
     response.encoding = 'utf-8'
     machines = response.json()

@@ -6,7 +6,7 @@ pubnub = Pubnub(
 
 
 def onRequestPhoneNumbers(message, channel):
-    with open('config.json') as data_file:
+    with open('/home/pi/dev/ding/config.json') as data_file:
         data = json.load(data_file)
         print(data)
         pubnub.publish(channel='receive_phone_numbers', message=json.dumps(data))
@@ -14,7 +14,7 @@ def onRequestPhoneNumbers(message, channel):
 
 def onAddNumber(message,channel):
     print(message)
-    f = open('config.json', 'r')
+    f = open('/home/pi/dev/ding/config.json', 'r')
     jsonStr = ''
     if f:
         data = json.load(f)
@@ -23,7 +23,7 @@ def onAddNumber(message,channel):
     print(jsonStr)
     f.close()
 
-    f = open('config.json', 'w+')
+    f = open('/home/pi/dev/ding/config.json', 'w+')
     if f:
         f.write(jsonStr)
     f.close()
@@ -31,14 +31,14 @@ def onAddNumber(message,channel):
 
 def onRemoveNumber(message,channel):
     newData = []
-    f = open('config.json', 'r')
+    f = open('/home/pi/dev/ding/config.json', 'r')
     if f:
         data = json.load(f)
         for d in data:
             if d['phone_number'] != message:
                 newData.append(d)
     f.close()
-    f = open('config.json', 'w+')
+    f = open('/home/pi/dev/ding/config.json', 'w+')
     if f:
         f.write(json.dumps(newData, indent=4, separators=(',', ': ')))
     f.close()
